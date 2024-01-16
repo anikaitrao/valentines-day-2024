@@ -1,0 +1,15 @@
+{
+  "name": "valentines-day-2024",
+  "version": "1.0.0",
+  "description": "Happy Valentine's day! From Anikait to Sanjana :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "valentines-day-2024"
+  },
+  "author": "anikaitrao",
+  "license": "MIT"
+}
