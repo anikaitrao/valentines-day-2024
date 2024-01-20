@@ -1,14 +1,14 @@
 // Animation Timeline
 const animationTimeline = () => {
     // Spit chars that needs to be animated individually
-    const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
-    const hbd = document.getElementsByClassName("wish-hbd")[0];
+    const textBoxChars = document.getElementsByClassName("search-bar")[0];
+    const vday = document.getElementsByClassName("wish-vday")[0];
   
     textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
       .split("")
       .join("</span><span>")}</span`;
   
-    hbd.innerHTML = `<span>${hbd.innerHTML
+      vday.innerHTML = `<span>${vday.innerHTML
       .split("")
       .join("</span><span>")}</span`;
   
@@ -31,7 +31,7 @@ const animationTimeline = () => {
     tl.to(".container", 0.1, {
       visibility: "visible",
     })
-      .from(".one", 0.7, {
+      .from(".one", 0.8, {
         opacity: 0,
         y: 10,
       })
@@ -57,6 +57,19 @@ const animationTimeline = () => {
         },
         "-=1"
       )
+      .from("two-point-five", 0.6, {
+        opacity: 0,
+        y: 10,
+      })
+      .to(
+        ".two-point-five",
+        0.7,
+        {
+          opacity: 0,
+          y: 10,
+        },
+        "-=.5"
+      )
       .from(".three", 0.7, {
         opacity: 0,
         y: 10,
@@ -80,7 +93,7 @@ const animationTimeline = () => {
         opacity: 0,
       })
       .staggerTo(
-        ".hbd-chatbox span",
+        ".search-bar span",
         0.5,
         {
           visibility: "visible",
@@ -200,7 +213,7 @@ const animationTimeline = () => {
         opacity: 0,
       })
       .staggerFrom(
-        ".wish-hbd span",
+        ".wish-vday span",
         0.7,
         {
           opacity: 0,
@@ -213,7 +226,7 @@ const animationTimeline = () => {
         0.1
       )
       .staggerFromTo(
-        ".wish-hbd span",
+        ".wish-vday span",
         0.7,
         {
           scale: 1.4,
@@ -273,11 +286,5 @@ const animationTimeline = () => {
     });
   };
     
-  // Run fetch and animation in sequence
-  const resolveFetch = () => {
-    return new Promise((resolve, reject) => {
-      resolve("Fetch complete");
-    });
-  };
-  
-  resolveFetch().then(animationTimeline());
+
+  animationTimeline();
