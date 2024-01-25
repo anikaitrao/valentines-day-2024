@@ -151,8 +151,14 @@ const animationTimeline = () => {
         "+=2"
       )
       .from(".idea-6", 0.7, ideaTextTrans)
-      .to(".idea-6", 0.7, ideaTextTransLeave, "+=1.5")
-      .staggerFromTo(
+      .to(".idea-6", 0.7, ideaTextTransLeave, "+=2");
+
+      for (let i = 0; i < 19; i++) {
+        tl.from(`.album-${i}`, 0.7, ideaTextTrans)
+        .to(`.album-${i}`, 0.7, ideaTextTransLeave, "+=3");
+      }
+
+      tl.staggerFromTo(
         ".baloons img",
         2.5,
         {

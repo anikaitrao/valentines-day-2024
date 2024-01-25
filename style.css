@@ -21,6 +21,10 @@ body {
   top: 5vh;
 }
 
+.container div.album {
+  top: 5vh;
+}
+
 .container div.six {
   top: 10vh;
   z-index: 1;
@@ -98,6 +102,16 @@ body {
   position: absolute;
   left: 0;
   right: 0;
+}
+
+.album {
+  position: absolute;
+}
+
+.pairing {
+  position: absolute;
+  top: -100px;
+  left: 200px;
 }
 
 .idea-3 strong {
