@@ -17,6 +17,10 @@ body {
   overflow: hidden;
 }
 
+.container div.one {
+  top: 5vh;
+}
+
 .container div.six {
   top: 10vh;
   z-index: 1;
@@ -42,7 +46,6 @@ body {
 }
 
 .one > img {
-  vertical-align: middle;
   margin-bottom: 10px;
   max-width: 100%;
   height: auto;
