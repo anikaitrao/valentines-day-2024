@@ -1,6 +1,8 @@
 // Animation Timeline
 const animationTimeline = () => {
     // Spit chars that needs to be animated individually
+    const NUM_PICTURES_IN_ALBUM = 21;
+
     const textBoxChars = document.getElementsByClassName("search-bar")[0];
     const vday = document.getElementsByClassName("wish-vday")[0];
   
@@ -153,9 +155,9 @@ const animationTimeline = () => {
       .from(".idea-6", 0.7, ideaTextTrans)
       .to(".idea-6", 0.7, ideaTextTransLeave, "+=2");
 
-      for (let i = 0; i < 19; i++) {
+      for (let i = 1; i < NUM_PICTURES_IN_ALBUM+1; i++) {
         tl.from(`.album-${i}`, 0.7, ideaTextTrans)
-        .to(`.album-${i}`, 0.7, ideaTextTransLeave, "+=3");
+        .to(`.album-${i}`, 0.7, ideaTextTransLeave, "+=4");
       }
 
       tl.staggerFromTo(
